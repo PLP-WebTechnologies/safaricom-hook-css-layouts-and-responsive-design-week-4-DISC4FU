@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Main Content - CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+}
+
+.social-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: lightgray;
+}
+
+/* Responsive Design */
+
+/* Small Screens (Stack everything) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Medium Screens (Keep layout, but stack main content) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 70%;
+    }
+}
+
+/* Bonus: Smooth transition effect */
+* {
+    transition: all 0.3s ease-in-out;
+}
